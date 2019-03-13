@@ -1,24 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t56-hO-AKS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Chalkduster.ttf">
+            <string>Chalkduster</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--ProductVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProductVC" customModule="PlistDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER PRODUCT ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aIw-Px-SQS">
+                                <rect key="frame" x="16" y="143" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Yp1-F0-6OP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER PRODUCT NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8pE-ay-6q2">
+                                <rect key="frame" x="16" y="182" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Bhb-ZK-qlI"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ENTER PRODUCT PRICE" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EW9-yp-oFU">
+                                <rect key="frame" x="16" y="221" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rmv-a9-8kb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD NEW PRODUCT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k9-yg-yyN">
+                                <rect key="frame" x="16" y="88" width="343" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="2QH-A0-5jx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F4-xb-Lwe">
+                                <rect key="frame" x="87" y="274" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.40784313729999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PC7-5H-nag"/>
+                                    <constraint firstAttribute="width" constant="200" id="umw-0p-jFn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <state key="normal" title="ADD PRODUCT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAddProductTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZe-4L-o6d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-jb-csx">
+                                <rect key="frame" x="88" y="333" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.40784313729999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8XO-2H-y3i"/>
+                                    <constraint firstAttribute="width" constant="200" id="JRc-WT-MeB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <state key="normal" title="LIST PRODUCTS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnListProductsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJa-ht-ujw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3411764706" green="0.61568627450000002" blue="0.34901960780000002" alpha="0.53253460570469802" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6k9-yg-yyN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="2Xh-rh-XiD"/>
+                            <constraint firstItem="NUa-jb-csx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Re-Sa-67N"/>
+                            <constraint firstItem="aIw-Px-SQS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8qr-hy-ZuJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8pE-ay-6q2" secondAttribute="trailing" constant="16" id="F6e-ll-Nfd"/>
+                            <constraint firstItem="EW9-yp-oFU" firstAttribute="top" secondItem="8pE-ay-6q2" secondAttribute="bottom" constant="9" id="HqV-ep-F08"/>
+                            <constraint firstItem="8pE-ay-6q2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JOR-iG-EK2"/>
+                            <constraint firstItem="aIw-Px-SQS" firstAttribute="top" secondItem="6k9-yg-yyN" secondAttribute="bottom" constant="18" id="L0b-5h-dMx"/>
+                            <constraint firstItem="4F4-xb-Lwe" firstAttribute="top" secondItem="EW9-yp-oFU" secondAttribute="bottom" constant="23" id="MdS-Ff-1oN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6k9-yg-yyN" secondAttribute="trailing" constant="16" id="TWe-6t-kqB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EW9-yp-oFU" secondAttribute="trailing" constant="16" id="W6Y-es-aN7"/>
+                            <constraint firstItem="8pE-ay-6q2" firstAttribute="top" secondItem="aIw-Px-SQS" secondAttribute="bottom" constant="9" id="kuQ-KF-XBH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aIw-Px-SQS" secondAttribute="trailing" constant="16" id="m6N-Zz-tr7"/>
+                            <constraint firstItem="4F4-xb-Lwe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZC-v0-Yyn"/>
+                            <constraint firstItem="EW9-yp-oFU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="s12-aE-mMw"/>
+                            <constraint firstItem="6k9-yg-yyN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uKS-18-FBn"/>
+                            <constraint firstItem="NUa-jb-csx" firstAttribute="top" secondItem="4F4-xb-Lwe" secondAttribute="bottom" constant="29" id="x0L-tR-0gO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XJ0-BC-3sa"/>
+                    <connections>
+                        <outlet property="txtFieldProductID" destination="aIw-Px-SQS" id="TWi-Z6-edh"/>
+                        <outlet property="txtFieldProductName" destination="8pE-ay-6q2" id="DnF-sn-6AK"/>
+                        <outlet property="txtFieldProductPrice" destination="EW9-yp-oFU" id="uHW-gl-KmO"/>
+                        <segue destination="LSz-EM-QfB" kind="show" identifier="productlistSegue" id="GLt-TU-0ep"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="801" y="114"/>
+        </scene>
+        <!--Product ListVC-->
+        <scene sceneID="sSM-XD-61L">
+            <objects>
+                <viewController id="LSz-EM-QfB" customClass="ProductListVC" customModule="PlistDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eW6-lQ-feE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aT-Bu-bNB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" id="ItG-tT-xaE">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ItG-tT-xaE" id="bil-eW-yKY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LSz-EM-QfB" id="Xg1-Ue-iKj"/>
+                                    <outlet property="delegate" destination="LSz-EM-QfB" id="8lp-3v-CF6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7aT-Bu-bNB" firstAttribute="top" secondItem="b7M-Qb-0r3" secondAttribute="top" id="2N3-m3-UPY"/>
+                            <constraint firstItem="7aT-Bu-bNB" firstAttribute="bottom" secondItem="b7M-Qb-0r3" secondAttribute="bottom" id="oVS-ro-e4w"/>
+                            <constraint firstItem="7aT-Bu-bNB" firstAttribute="leading" secondItem="b7M-Qb-0r3" secondAttribute="leading" id="u3c-V6-Wfy"/>
+                            <constraint firstItem="7aT-Bu-bNB" firstAttribute="trailing" secondItem="b7M-Qb-0r3" secondAttribute="trailing" id="wNR-n2-hCN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="b7M-Qb-0r3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tQL-f8-dYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1484" y="113.79310344827587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aDv-SZ-2du">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t56-hO-AKS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kr1-yS-pU1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4CV-Hi-uSk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDc-PC-1c7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="130.43478260869566"/>
         </scene>
     </scenes>
 </document>
